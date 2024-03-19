@@ -4,7 +4,7 @@ $(window).on("load" , function(){
 
   
   //  AOS animation
-  
+
   AOS.init({
     once : true 
   });
@@ -59,8 +59,12 @@ if($(window).width() < 1200){
   // main Swiper 
   const mainSwiper = new Swiper('.mainBanner .swiper', {
     loop: true,
-     autoplay: true,
     draggable: true,
+    speed : 1000,
+    autoplay: {
+      delay: 4000,
+      // disableOnInteraction: false,
+  },
   
     pagination: {
       el: '.mainBanner .swiper-pagination',
@@ -79,6 +83,7 @@ if($(window).width() < 1200){
 const clientsReviews = new Swiper('.clients-reviews .swiper', {
   loop: true,
   autoplay: true,
+  speed : 1000,
   draggable: true,
   pagination: {
     el: '.clients-reviews .swiper-pagination',
@@ -102,6 +107,7 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
 const  AboutSwiper = new Swiper('.about .swiper', {
   loop: true,
   autoplay: true,
+  speed : 1000,
   allowTouchMove: true,
   draggable: true,
  
@@ -144,6 +150,7 @@ const  AboutSwiper = new Swiper('.about .swiper', {
 const residentialSwiper = new Swiper('#nav-residential .swiper', {
   loop: true,
   autoplay: true,
+  speed : 1000,
   draggable: true,
   
   pagination: {
@@ -182,6 +189,7 @@ const residentialSwiper = new Swiper('#nav-residential .swiper', {
 const commercialSwiper = new Swiper('#nav-commercial .swiper', {
   loop: true,
    autoplay: true,
+   speed : 1000,
   draggable: true,
   pagination: {
     el: '#nav-commercial .swiper-pagination',
@@ -219,6 +227,7 @@ const furnishingSwiper = new Swiper('#nav-furnishing .swiper', {
   loop: true,
    autoplay: true,
   draggable: true,
+  speed : 1000,
   pagination: {
     el: '#nav-furnishing .swiper-pagination',
     clickable: true,
@@ -255,6 +264,7 @@ const supervisionSwiper = new Swiper('#nav-supervision .swiper', {
   loop: true,
    autoplay: true,
   draggable: true,
+  speed : 1000,
   pagination: {
     el: '#nav-supervision .swiper-pagination',
     clickable: true,
