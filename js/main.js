@@ -1,6 +1,13 @@
 
 $(window).on("load" , function(){
   $(".preloader").fadeOut();
+
+  
+  //  AOS animation
+  
+  AOS.init({
+    once : true 
+  });
 })
 
 
@@ -9,11 +16,8 @@ $(window).on("load" , function(){
 $(document).ready(function(){
 
 
-  AOS.init({
-    once : true 
-  });
 
-//  AOS animation
+
 
 
 
