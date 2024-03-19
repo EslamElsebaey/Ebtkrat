@@ -8,18 +8,9 @@ $(window).on("load" , function(){
   AOS.init({
     once : true 
   });
-})
 
 
-
-
-$(document).ready(function(){
-
-
-
-
-
-
+  
 
   setTimeout(() => {
     if($(".counter-item").hasClass("aos-animate")){
@@ -40,22 +31,7 @@ $(document).ready(function(){
   }, 1000);
 
 
-
-
-if($(window).width() < 992){
-  $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "300")
-  $(".about-content").attr("data-aos", "fade-down")
-  $(".portfolio-cont .title").attr("data-aos", "fade-down")
-  $(".portfolio-cont .title").attr("data-aos-delay", "800")
-}
-
-if($(window).width() < 1200){
-  $(".about-content").attr("data-aos", "fade-down")
-}
-
-
-
-
+  
   // main Swiper 
   const mainSwiper = new Swiper('.mainBanner .swiper', {
     loop: true,
@@ -294,6 +270,37 @@ const supervisionSwiper = new Swiper('#nav-supervision .swiper', {
     },
   },
 });
+
+
+
+
+})
+
+
+
+
+$(document).ready(function(){
+
+
+
+
+
+
+
+
+
+if($(window).width() < 992){
+  $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "300")
+  $(".about-content").attr("data-aos", "fade-down")
+  $(".portfolio-cont .title").attr("data-aos", "fade-down")
+  $(".portfolio-cont .title").attr("data-aos-delay", "800")
+}
+
+if($(window).width() < 1200){
+  $(".about-content").attr("data-aos", "fade-down")
+}
+
+
 
 
 
