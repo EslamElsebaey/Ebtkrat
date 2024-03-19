@@ -1,0 +1,41 @@
+.brands{
+    padding: 41px 0;
+    background-color: #271F1E;
+    .js-marquee-wrapper {
+      width: 100% !important;
+      display: flex;
+    }
+    .js-marquee {
+      display: flex;
+      column-gap: 40px;
+    }
+
+     .block-marquee {
+        overflow-x: hidden;
+        flex-direction: row;
+        // column-gap: 40px;
+        justify-content: flex-start;
+        direction: ltr;
+       
+    }
+    .block-anchor{
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            max-width: 100%;
+        }
+    }
+
+}
+
+
+@include max-768 {
+  .brands{
+    padding: 25px 0;
+  }
+  .brands .js-marquee{
+    column-gap: 30px;
+  }
+}

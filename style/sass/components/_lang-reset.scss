@@ -1,0 +1,105 @@
+html[dir="ltr"]{
+    .banner-desc .request-anchor , .viewAllWorks , .form-div .apply-btn{
+        flex-direction: row-reverse;
+    }
+    .english{
+        color: #fff;
+        &:hover{
+            color: #9a7a4d;
+        }
+    }
+    .arabic{
+        color:  #5f5f5f ;
+    }
+    .counter-sec .counter-parent .counter-item{
+        width: 130px;
+        height: 120px;
+        // background-color: #9a7a4d;
+        padding-inline: 10px;
+    }
+    .counter-sec .counter-parent .counter-item .num-title{
+        height: 36px;
+    }
+    .banner-desc{
+        width: 620px;
+    }
+    .counter-sec .counter-parent .counter-item::after{
+        inset-inline-start: 146px;
+    }
+    .upper-cont .title{
+        max-width: 214px;
+        line-height: 40px;
+    }
+    .about-content .title{
+        max-width: 525px;
+    }
+    .about-content .para{
+        line-height: 32px;
+    }
+    .lower-cont .arrow-anchor img{
+        transform: rotate(180deg);
+    }
+    .service-item .content .title{
+       line-height: 40px ;
+    }
+    .proj-cont .proj-desc{
+        -webkit-line-clamp: 4;
+        max-height:  84px;
+    }
+
+    .blog-parent .desc .title{
+        max-width: 405px;
+        line-height: 45px;
+        max-height: 90px;
+    }
+    .blog-link .icon{
+        transform: rotate(180deg);
+    }
+    .clients-reviews .review-content{
+        max-width: 625px;
+    }
+    
+
+    @include max-1200{
+        .service-item .content .title{
+            line-height: 1.4;
+        }
+    }
+    @include max-992 {
+        .service-item .content .sub-para{
+            line-height: 1.5;
+            height: 127.5px;
+        }
+    }
+    @include max-768 {
+        .clients-reviews .review-text{
+            line-height: 1.35;
+        }
+        .clients-reviews .review-content{
+            max-width: 100%;
+        }
+       .blog-parent .desc .title{
+            max-width: 100%;
+            line-height: 1.4;
+            max-height: 62px;
+        }
+         .upper-cont .title{
+            max-width: 100%;
+            line-height: 1.35;
+            height: 61px;
+            margin-bottom: 15px;
+        }
+        .banner-desc{
+            width: 100%;
+        }
+        .counter-sec .counter-parent .counter-item::after{
+            inset-inline-start: 151px;
+        }
+        .proj-cont .proj-desc{
+            -webkit-line-clamp: 5;
+            max-height:  105px;
+        }
+    }
+
+    
+}
