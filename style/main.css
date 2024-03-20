@@ -408,7 +408,14 @@ header {
   justify-content: flex-start;
   align-items: center;
 }
-.big-menu > li::after {
+.big-menu > li a {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 300;
+  text-transform: capitalize;
+  transition: all linear 0.2s;
+}
+.big-menu > li a::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -419,18 +426,10 @@ header {
   left: 0;
   display: none;
 }
-.big-menu > li a {
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 300;
-  text-transform: capitalize;
-  transition: all linear 0.2s;
-  position: relative;
-}
 .big-menu > li a:hover {
   color: #9a7a4d;
 }
-.big-menu > li.active::after {
+.big-menu > li a.active::after {
   display: block;
 }
 
