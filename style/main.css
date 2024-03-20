@@ -2294,10 +2294,10 @@ header {
     display: none;
   }
   .clients-reviews .swiper-button-next, .clients-reviews .swiper-rtl .swiper-button-prev {
-    right: 10px;
+    left: 10px;
   }
   .clients-reviews .swiper-button-prev, .clients-reviews .swiper-rtl .swiper-button-next {
-    left: 10px;
+    right: 10px;
   }
   .clients-reviews .swiper-button-next i, .clients-reviews .swiper-button-prev i {
     font-size: 20px;
@@ -2315,6 +2315,9 @@ header {
   .clients-reviews .swiper-button-next, .clients-reviews .swiper-button-prev {
     width: auto;
     height: auto;
+    background-color: transparent;
+  }
+  .clients-reviews .swiper-button-next:hover, .clients-reviews .swiper-button-prev:hover {
     background-color: transparent;
   }
   .clients-reviews .review-desc {
@@ -2758,11 +2761,14 @@ html[dir=ltr] .clients-reviews .review-content {
   }
 }
 @media only screen and (max-width: 767px) {
+  html[dir=ltr] .banner-desc .title {
+    line-height: 1.35;
+  }
   html[dir=ltr] .about-content .title {
     line-height: 1.3;
   }
   html[dir=ltr] .clients-reviews .review-text {
-    line-height: 1.35;
+    line-height: 1.3;
   }
   html[dir=ltr] .clients-reviews .review-content {
     max-width: 100%;

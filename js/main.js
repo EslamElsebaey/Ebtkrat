@@ -60,10 +60,6 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
   autoplay: true,
   speed : 1000,
   draggable: true,
-  pagination: {
-    el: '.clients-reviews .swiper-pagination',
-    clickable: true,
-  },
   navigation: {
     nextEl: '.clients-reviews .swiper-button-next ',
     prevEl: '.clients-reviews .swiper-button-prev',
