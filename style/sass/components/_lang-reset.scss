@@ -72,6 +72,9 @@ html[dir="ltr"]{
         }
     }
     @include max-768 {
+        .about-content .title{
+            line-height: 1.3;
+        }
         .clients-reviews .review-text{
             line-height: 1.35;
         }

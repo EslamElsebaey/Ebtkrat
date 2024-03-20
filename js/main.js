@@ -80,14 +80,14 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
 // About swiper
 
 const  AboutSwiper = new Swiper('.about .swiper', {
-  // loop: true,
-  autoplay: true,
+  loop: true,
+  // autoplay: true,
   speed : 1000,
   allowTouchMove: true,
   draggable: true,
-  scrollbar: {
-    el: ".about .swiper-scrollbar",
-    hide: false,
+  pagination: {
+    el: '.about .swiper-pagination',
+    clickable: true,
   },
   
   
@@ -270,7 +270,7 @@ const supervisionSwiper = new Swiper('#nav-supervision .swiper', {
   },
 });
 
-
+//  End Portfolio swipers
 
 
 
@@ -291,14 +291,13 @@ $(document).ready(function(){
 
 
 if($(window).width() < 992){
-  $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "300")
-  $(".about-content").attr("data-aos", "fade-down")
-  $(".portfolio-cont .title").attr("data-aos", "fade-down")
-  $(".portfolio-cont .title").attr("data-aos-delay", "800")
+  $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "200")
+  $(".about-content .title , .about-content .para , .talkToUs").removeAttr("data-aos")
+  $(".portfolio-cont .title").attr("data-aos", "fade-down").attr("data-aos-delay", "800")
 }
 
 if($(window).width() < 1200){
-  $(".about-content").attr("data-aos", "fade-down")
+  $(".about-content").attr("data-aos", "fade-down").attr("data-aos-easing", "ease-in-out")
 }
 
 
@@ -308,7 +307,7 @@ if($(window).width() < 1200){
 
 
 
-//  End Portfolio swipers
+
 
 // **************************************************************************************************
 
