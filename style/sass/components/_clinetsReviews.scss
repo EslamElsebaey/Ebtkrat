@@ -77,10 +77,18 @@
     }
 
     .swiper-button-prev, .swiper-rtl .swiper-button-next{
-        left: 40px;
+        right: 40px;
+        left: unset;
+        i{
+            transform: rotate(180deg);
+        }
     }
     .swiper-button-next, .swiper-rtl .swiper-button-prev{
-        right: 40px;
+        left: 40px;
+        right: unset;
+        i{
+            transform: rotate(180deg);
+        }
     }
     
     

@@ -82,7 +82,7 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
 
 const  AboutSwiper = new Swiper('.about .swiper', {
   loop: true,
-  autoplay: true,
+  // autoplay: true,
   speed : 1000,
   allowTouchMove: true,
   draggable: true,
@@ -125,7 +125,7 @@ const  AboutSwiper = new Swiper('.about .swiper', {
 // residential swiper 
 const residentialSwiper = new Swiper('#nav-residential .swiper', {
   loop: true,
-  autoplay: true,
+  // autoplay: true,
   speed : 1000,
   draggable: true,
   
@@ -270,6 +270,8 @@ const supervisionSwiper = new Swiper('#nav-supervision .swiper', {
     },
   },
 });
+
+
 
 
 

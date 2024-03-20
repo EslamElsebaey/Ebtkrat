@@ -2,9 +2,9 @@
     overflow: hidden;
     padding-top: 112px;
    
-   .swiper-slide-prev{
-    opacity: 0;
-   }
+//    .swiper-slide-prev{
+//    opacity: 0;
+//    }
     .swiper-pagination{
         display: flex;
     }
@@ -58,6 +58,7 @@
 .about-content{
     display: flex;
     flex-direction: column;
+    background-color: #ecebe9;
     // width: 670px;
     .title{
         font-size: 55px;

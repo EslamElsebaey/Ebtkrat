@@ -215,10 +215,14 @@
         overflow: unset;
     }
     .swiper-button-prev, .swiper-rtl .swiper-button-next{
-        left: -75px;
+        right: -75px;
+        left: unset;
+        transform: rotate(180deg);
     }
     .swiper-button-next, .swiper-rtl .swiper-button-prev{
-        right: -75px;
+        left: -75px;
+        right: unset;
+        transform: rotate(180deg);
     }
    
 }
