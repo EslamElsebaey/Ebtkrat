@@ -856,7 +856,7 @@ header {
 }
 @media only screen and (max-width: 767px) {
   .mainBanner .mainslider-item {
-    min-height: calc(100vh - 67px);
+    min-height: calc(100dvh - 68px);
     height: auto;
     padding: 45px 0;
   }
