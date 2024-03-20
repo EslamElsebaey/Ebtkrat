@@ -187,24 +187,31 @@
 
 
 .mainBanner {
-    .swiper-pagination{
+    .swiper-scrollbar{
         display: flex;
         bottom: 0;
         height: 6px;
         background-color: rgba($color: #9a7a4d, $alpha: 0.2);
         z-index: 4;
-    }
-    .swiper-pagination-bullet{
-        flex-grow: 1;
-        margin: 0 !important;
-        height: 100%;
+        width: 100%;
+        left: 0;
         border-radius: 0;
-        background-color: rgba($color: #9a7a4d, $alpha: 0.2);
+        .swiper-scrollbar-drag{
+            border-radius: 0;
+            background-color: rgba($color: #9a7a4d, $alpha: 0.502);
+        }
     }
-    .swiper-pagination-bullet-active{
-        margin: 0 !important;
-        background-color: rgba($color: #9a7a4d, $alpha: 1);
-    }
+    // .swiper-pagination-bullet{
+    //     flex-grow: 1;
+    //     margin: 0 !important;
+    //     height: 100%;
+    //     border-radius: 0;
+    //     background-color: rgba($color: #9a7a4d, $alpha: 0.2);
+    // }
+    // .swiper-pagination-bullet-active{
+    //     margin: 0 !important;
+    //     background-color: rgba($color: #9a7a4d, $alpha: 1);
+    // }
 }
 
 

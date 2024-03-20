@@ -808,23 +808,19 @@ header {
   display: none;
 }
 
-.mainBanner .swiper-pagination {
+.mainBanner .swiper-scrollbar {
   display: flex;
   bottom: 0;
   height: 6px;
   background-color: rgba(154, 122, 77, 0.2);
   z-index: 4;
-}
-.mainBanner .swiper-pagination-bullet {
-  flex-grow: 1;
-  margin: 0 !important;
-  height: 100%;
+  width: 100%;
+  left: 0;
   border-radius: 0;
-  background-color: rgba(154, 122, 77, 0.2);
 }
-.mainBanner .swiper-pagination-bullet-active {
-  margin: 0 !important;
-  background-color: #9a7a4d;
+.mainBanner .swiper-scrollbar .swiper-scrollbar-drag {
+  border-radius: 0;
+  background-color: rgba(154, 122, 77, 0.502);
 }
 
 [data-aos][data-aos][data-aos-delay="300"].aos-animate.counter-item.transition {
@@ -1159,26 +1155,20 @@ header {
   position: relative;
   padding-bottom: 137px;
 }
-.about .swiper-pagination {
-  width: calc(100% - 30px);
+.about .swiper-scrollbar {
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
   display: flex;
   height: 5px;
-  padding-inline: 40px;
   background-color: #271F1E;
-}
-.about .swiper-pagination-bullet {
-  flex-grow: 1;
-  margin: 0 !important;
-  height: 100%;
   border-radius: 0;
-  background-color: #271F1E;
 }
-.about .swiper-pagination-bullet-active {
-  margin: 0 !important;
-  background-color: #9A7A4D;
+.about .swiper-scrollbar .swiper-scrollbar-drag {
+  border-radius: 0;
+  background-color: #9a7a4d;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1699px) {

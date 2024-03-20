@@ -34,18 +34,17 @@ $(window).on("load" , function(){
   
   // main Swiper 
   const mainSwiper = new Swiper('.mainBanner .swiper', {
-    loop: true,
+    // loop: true,
     draggable: true,
     speed : 1000,
     autoplay: {
       delay: 4000,
       // disableOnInteraction: false,
   },
-  
-    pagination: {
-      el: '.mainBanner .swiper-pagination',
-      clickable: true,
-    },
+  scrollbar: {
+    el: ".mainBanner .swiper-scrollbar",
+    hide: false,
+  },
     
     breakpoints: {
       320: {
@@ -81,16 +80,16 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
 // About swiper
 
 const  AboutSwiper = new Swiper('.about .swiper', {
-  loop: true,
-  // autoplay: true,
+  // loop: true,
+  autoplay: true,
   speed : 1000,
   allowTouchMove: true,
   draggable: true,
- 
-  pagination: {
-    el: '.about .swiper-pagination',
-    clickable: true,
+  scrollbar: {
+    el: ".about .swiper-scrollbar",
+    hide: false,
   },
+  
   
   breakpoints: {
     0: {
