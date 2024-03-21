@@ -324,7 +324,7 @@ if($("html").attr("dir") == "ltr"){
 if($(window).width() < 992){
   $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "200")
   $(".about-content .title , .about-content .para , .talkToUs").removeAttr("data-aos")
-  $(".portfolio-cont .title").attr("data-aos", "fade-down").attr("data-aos-delay", "800")
+  $(".portfolio-cont .title").attr("data-aos", "fade-down").attr("data-aos-delay", "500").attr("data-aos-duration", "800")
   $(".blog-parent .desc").attr("data-aos", "fade-up")
 }
 
