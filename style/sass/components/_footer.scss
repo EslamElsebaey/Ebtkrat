@@ -1,3 +1,8 @@
+
+//************************************************************************************************
+
+// Footer Section
+
 footer{
     padding-top: 152px;
     padding-bottom: 54px;
@@ -107,6 +112,12 @@ footer{
     .countries{
         width: 100%;
         margin-top: 20px;
+        ul {
+            column-gap: 25px;
+            li{
+                font-size: 18px;
+            }
+        } 
     }
     footer{
         padding: 50px 0 40px 0;
@@ -117,25 +128,25 @@ footer{
     }
     .footer-mainLinks {
         margin-top: 40px;
+        a{
+            font-size: 18px;
+        }
+        ul{
+            row-gap: 15px;
+            column-gap: 25px;
+        }
     }
     .line-bottom{
         margin-top: 45px;
     }
-    .footer-mainLinks ul{
-        row-gap: 15px;
-        column-gap: 25px;
-    }
     .footer-social{
         column-gap: 20px;
-    }
-    .footer-social a{
-        font-size: 21px;
-    }
-    .footer-social a img{
-        width: 19px;
-    }
-    .footer-mainLinks a{
-        font-size: 18px;
+        a{
+            font-size: 21px;
+            img{
+                width: 19px;
+            }
+        }
     }
     .line{
         width: 100%;
@@ -144,13 +155,10 @@ footer{
     .footer-logo img{
         width: 180px;
     }
-    .countries ul li{
-        font-size: 18px;
-    }
-    .countries ul{
-        column-gap: 25px;
-    }
     .copyright{
         margin-top: 35px;
     }
 }
+
+
+//************************************************************************************************

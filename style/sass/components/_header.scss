@@ -1,4 +1,9 @@
-// topheader
+//************************************************************************************************
+
+// Header & Topheader Sections
+
+
+// topheader style
 
 .topheader{
     background-color: #191313;
@@ -84,11 +89,9 @@
         
 }
 
+//****************************************************
 
-
-
-
-// Header
+// Header style
 
 header{
     position: fixed;
@@ -123,21 +126,6 @@ header{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .big-menu {
     display: flex;
     justify-content: center;
@@ -158,7 +146,6 @@ header{
             font-weight: 300;
             text-transform: capitalize;
             transition: all linear .2s;
-            // position: relative;
             &::after{
                 content: "";
                 width: 100%;
@@ -203,7 +190,6 @@ header{
     }
     .consult-link{
         background-color: #9a7a4d;
-        // transform: perspective(1px) translateZ(0);
         &:hover{
         background-color: #191313;
         transform: translateY(-4px);
@@ -233,7 +219,6 @@ header{
 
 
 @include min-992 {
-    
     .close-lang-holder{
         display: none;
     }
@@ -247,15 +232,14 @@ header{
 
 
 @include max-1400 {
-    
     .big-menu > li{
         margin-inline-end: 20px;
+        a{
+            font-size: 19px;
+        }
     }
     .logo img{
         width: 160px;
-    }
-    .big-menu > li a{
-        font-size: 19px;
     }
 }
 
@@ -263,15 +247,15 @@ header{
     .logo img{
         width: 130px;
     }
-    .big-menu > li a{
-        font-size: 16px;
-    }
+    .big-menu > li{
+        margin-inline-end: 15px;
+        a{
+            font-size: 16px;
+        }
+    } 
     .call-consult-sec a{
         padding: 0;
         min-width: 135px;
-    }
-    .big-menu > li{
-        margin-inline-end: 15px;
     }
     .contact-mail > a{
         font-size: 14px;
@@ -288,9 +272,7 @@ header{
         top: 0;
         position: fixed;
         z-index: 20;
-
     }
-    
     .navigation{
         position: relative;
     }
@@ -301,10 +283,10 @@ header{
             column-gap: 7px;
         }
     }
-.nav-topheader-li:last-child{
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+    .nav-topheader-li:last-child{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
     .bars{
         display: flex;
         font-size: 24px;
@@ -319,7 +301,6 @@ header{
     .logo img{
         width: 170px;
     }
-  
     .openNav-btn{
         display: flex ;
         margin-inline-start: 30px;
@@ -399,17 +380,11 @@ header{
             color: #9a7a4d;
         }
     }
-   
-
     .close-lang-holder{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
- 
-
- 
-   
     .call-consult-sec .consult-link{
         display: none;
     }
@@ -425,13 +400,14 @@ header{
         min-width: unset;
         height: 37px;
     }
-    
     .logo img{
         width: 135px;
     }
     
 }
 
+
+//************************************************************************************************
 
 
 

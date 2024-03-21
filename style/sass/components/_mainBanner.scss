@@ -1,3 +1,6 @@
+//************************************************************************************************
+
+// MainBanner Section
 
 .mainBanner{
     .mainBanner-parent{
@@ -46,11 +49,6 @@
     text-align: center;
     width: 565px;
     margin-inline: auto;
-    // position: absolute;
-    // top: 164px;
-    // z-index: 3;
-    // left: 50%;
-    // transform: translateX(-50%);
    .title{
     font-size: 60px;
     line-height: 90px;
@@ -58,7 +56,6 @@
     font-weight: 300;
     text-align: center;
     margin-bottom: 35px;
-    // width: 45%;
     margin-inline: auto;
    }
 
@@ -102,7 +99,6 @@
     h4{
         font-size: 30px;
         margin-bottom: 0;
-        // line-height: 34px;
         color: #ffffff;
         font-weight: 300;
     }
@@ -118,21 +114,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // grid-template-columns: repeat(4 , 1fr);
-        // column-gap: 110px;
         .counter-item{
             width: 95px;
             padding: 0 12px;
             height: 106px;
             border-radius: 10px;
-            // background-color: #9a7a4d;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
-            // transition-property: background-color;
-            // transition: all linear 0.2s;
             &:hover{
                 background-color: #9a7a4d;
             }
@@ -147,7 +138,6 @@
                 transform: translateY(-50%);
             }
             .num-holder{
-                // min-height: 62.4px;
                 display: flex;
                 align-items: center;
                 margin-bottom: 10px;
@@ -257,25 +247,28 @@
         height: auto;
         padding: 45px 0;
     }
-    .banner-desc .achievements{
-        display: none;
-    }
-
-    
+    .banner-desc{
+        width: 100%;
+        .request-anchor{
+            margin-bottom: 35px;
+        }
+        .achievements{
+            display: none;
+        }
+        .title{
+            width: 100%;
+            font-size: 30px;
+            line-height: 1.5;
+        }
+    } 
     .counter-sec{
         width: 100%;
         margin-top: 10px;
-    }
-    .counter-sec .counter-parent{
-        column-gap: 45px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .banner-desc .title{
-        width: 100%;
-        font-size: 30px;
-        line-height: 1.5;
-       
+        .counter-parent{
+            column-gap: 45px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
     [data-aos][data-aos][data-aos-delay="800"].aos-animate.request-anchor{
         transition-delay: 1s !important;
@@ -308,21 +301,6 @@
     [data-aos][data-aos][data-aos-delay="1200"].aos-animate.counter-item.transition{
         transition-delay: 0s !important;
     }
-    
-     
-    
-    .banner-desc{
-        width: 100%;
-    }
-    .banner-desc .request-anchor{
-        margin-bottom: 35px;
-    }
-    .banner-desc .achievements h3{
-        font-size: 28px;
-    }
-    .banner-desc .achievements h4{
-        font-size: 25px;
-    }
   
     .counter-sec .counter-parent .counter-item::after{
         inset-inline-start: 118px;
@@ -354,5 +332,4 @@
 
 
 
-
-
+//************************************************************************************************

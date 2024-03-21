@@ -1,3 +1,7 @@
+
+//************************************************************************************************
+// Blog Section
+
 .blog{
     padding: 137px 0 ;
     overflow: hidden;
@@ -28,7 +32,6 @@
 
 .blog-parent{
     .desc{
-        // width: 642px;
         display: flex;
         flex-direction: column;
         border-radius: 10px;
@@ -126,13 +129,11 @@
         transition: all linear 0.2s;
         background-color: #271f1e;
         z-index: -1;
-        // border-radius: 50%;
     }
     &:hover{
         &::after{
             top: 0;
         }
-        // background-color: #271f1e;
         .icon{
             color: #ffffff;
         }
@@ -152,18 +153,18 @@
 @include max-1400 {
     .blog-parent{
         grid-template-columns: 600px  1fr;
-    }
-    .blog-parent .desc{
-        padding: 30px;
-    }
-    .blog-parent .desc .para{
-        margin-top: 30px;
-    }
-    .blog-parent .desc .title{
-        font-size: 25px;
-        max-width: 100%;
-        line-height: 1.5;
-        max-height: 75px;
+        .desc{
+            padding: 30px;
+            .para{
+                margin-top: 30px;
+            }
+            .title{
+                font-size: 25px;
+                max-width: 100%;
+                line-height: 1.5;
+                max-height: 75px;
+            }
+        }
     }
 }
 
@@ -186,37 +187,39 @@
 @include max-768 {
     .blog-parent{
         min-height: max-content;
+        .img .title{
+            inset-inline-start: unset;
+            font-size: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .desc {
+            padding: 20px;
+            .title{
+                font-size: 22px;
+                max-height: 66px;
+                text-align: center;
+            }
+            .para{
+                font-size: 18px;
+                line-height: 1.5;
+                max-width: 100%;
+                text-align: center;
+                max-height: 135px;
+                margin-top: 25px;
+            }
+        } 
     }
     .blog{
         padding: 60px 0 50px 0;
     }
-    .blog-parent .img .title{
-        inset-inline-start: unset;
-        font-size: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .blog-parent .desc .title{
-        font-size: 22px;
-        max-height: 66px;
-        text-align: center;
-    }
-    .blog-parent .desc{
-        padding: 20px;
-    }
     .comment-anchor{
         margin-top: 35px;
-    }
-    .blog-parent .desc .para{
-        font-size: 18px;
-        line-height: 1.5;
-        max-width: 100%;
-        text-align: center;
-        max-height: 135px;
-        margin-top: 25px;
     }
     .blog-link{
         width: 35px;
         height: 35px;
     }
 }
+
+//************************************************************************************************

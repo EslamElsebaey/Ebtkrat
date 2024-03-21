@@ -1,8 +1,10 @@
-//  clients reviews section 
+//************************************************************************************************
+
+//  Clients reviews Section 
+
 .clients-reviews{
     position: relative;
     padding: 67px 0 85px 0;
-    // height: 378px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position:  center center;
@@ -93,7 +95,6 @@
     
     
     .swiper-pagination{
-        // display: flex;
         bottom: 0;
         height: 6px;
         background-color: rgba($color: #9a7a4d, $alpha: 0.2);
@@ -119,70 +120,65 @@
 
 
 @include max-768 {
-    .clients-reviews .review-content{
-        max-width: 100%;
-    }
-    .clients-reviews{
+    .clients-reviews {
         padding: 50px 0 ;
-    }
-    .clients-reviews .review-text{
-        font-size: 22px;
-        line-height: 1.5;
-    }
-    .clients-reviews .title{
-        margin-bottom: 20px;
-    }
-    .clients-reviews{
         background-position: 53%;
-    }
-    .clients-reviews .swiper-pagination{
-        display: none;
-        // bottom: 20px;
-    }
-   
-    .clients-reviews .swiper-button-next, .clients-reviews .swiper-rtl .swiper-button-prev{
-        left: 10px;
-       
-    }
-    .clients-reviews .swiper-button-prev, .clients-reviews .swiper-rtl .swiper-button-next{
-        right: 10px;
-    }
-   .clients-reviews .swiper-button-next i, .clients-reviews .swiper-button-prev i{
-        font-size: 20px ;
-        color: #9A7A4D ;
-       
-    }
-    .clients-reviews{
+        .review-content{
+            max-width: 100%;
+        }
+        .review-text{
+            font-size: 22px;
+            line-height: 1.5;
+        }
+        .title{
+            margin-bottom: 20px;
+        }
+        .swiper-pagination{
+            display: none;
+        }
+        .swiper-button-next, .clients-reviews .swiper-rtl .swiper-button-prev{
+            left: 10px;
+        }
+        .swiper-button-prev, .clients-reviews .swiper-rtl .swiper-button-next{
+            right: 10px;
+        }
+        .swiper-button-next i, .swiper-button-prev i{
+            font-size: 20px ;
+            color: #9A7A4D ;
+           
+        }
         .fa-arrow-right:before{
             content: "\f054" ;
         }
         .fa-arrow-left:before{
             content: "\f053" ;
         }
-    }   
-    
-    .clients-reviews .swiper-button-next::after, .clients-reviews .swiper-button-prev::after{
-        display: none;
-    }
-     .clients-reviews .swiper-button-next, .clients-reviews .swiper-button-prev{
-        width: auto ;
-        height: auto ;
-        background-color: transparent ;
-        &:hover{
-            background-color: transparent;
+        .swiper-button-next::after, .swiper-button-prev::after{
+            display: none;
         }
-    }
-    .clients-reviews .review-desc{
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-height: 105px;
-        padding-inline: 12px;
-        font-size: 15px;
-    }
+        .swiper-button-next, .swiper-button-prev{
+            width: auto ;
+            height: auto ;
+            background-color: transparent ;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+        .review-desc{
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 105px;
+            padding-inline: 12px;
+            font-size: 15px;
+        }
+    } 
     .rectangle{
         height: 50px;
     }
 }
+
+
+//************************************************************************************************
