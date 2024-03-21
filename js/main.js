@@ -1,16 +1,20 @@
 
 $(window).on("load" , function(){
+
+// preloader
   $(".preloader").fadeOut();
 
-  
-  //  AOS animation
+//*************************************************************
+
+//  AOS animation
 
   AOS.init({
     once : true 
   });
 
+//*************************************************************
 
-  
+// set transtion for elements after applying the animation 
 
   setTimeout(() => {
     if($(".counter-item").hasClass("aos-animate")){
@@ -30,16 +34,17 @@ $(window).on("load" , function(){
     }
   }, 1000);
 
+//*************************************************************
+
 
   
-  // main Swiper 
+// main Swiper 
+
   const mainSwiper = new Swiper('.mainBanner .swiper', {
-    // loop: true,
     draggable: true,
     speed : 1000,
     autoplay: {
       delay: 4000,
-      // disableOnInteraction: false,
   },
   scrollbar: {
     el: ".mainBanner .swiper-scrollbar",
@@ -54,7 +59,12 @@ $(window).on("load" , function(){
     }
   });
 
+//*************************************************************
+
+
+
 // clients reviews swiper 
+
 const clientsReviews = new Swiper('.clients-reviews .swiper', {
   loop: true,
   autoplay: true,
@@ -71,13 +81,15 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
   }
 });
 
-
+//*************************************************************
 
 // About swiper
 
 const  AboutSwiper = new Swiper('.about .swiper', {
   loop: true,
-  autoplay: true,
+  autoplay: {
+    delay: 3000,
+  },
   speed : 1000,
   allowTouchMove: true,
   draggable: true,
@@ -114,13 +126,16 @@ const  AboutSwiper = new Swiper('.about .swiper', {
   },
 });
 
+//*************************************************************
 
-// Portfolio swipers
+// Portfolio Swipers
 
 // residential swiper 
 const residentialSwiper = new Swiper('#nav-residential .swiper', {
   loop: true,
-  autoplay: true,
+  autoplay: {
+    delay: 2500,
+  },
   speed : 1000,
   draggable: true,
   
@@ -154,12 +169,14 @@ const residentialSwiper = new Swiper('#nav-residential .swiper', {
   },
 });
 
-
+//*************************************************************
 
 // commercial  swiper 
 const commercialSwiper = new Swiper('#nav-commercial .swiper', {
   loop: true,
-   autoplay: true,
+  autoplay: {
+    delay: 2500,
+  },
    speed : 1000,
   draggable: true,
   pagination: {
@@ -192,11 +209,14 @@ const commercialSwiper = new Swiper('#nav-commercial .swiper', {
   },
 });
 
+//*************************************************************
 
 // furnishing  swiper 
 const furnishingSwiper = new Swiper('#nav-furnishing .swiper', {
   loop: true,
-   autoplay: true,
+  autoplay: {
+    delay: 2500,
+  },
   draggable: true,
   speed : 1000,
   pagination: {
@@ -229,11 +249,14 @@ const furnishingSwiper = new Swiper('#nav-furnishing .swiper', {
   },
 });
 
+//*************************************************************
 
 // supervision  swiper 
 const supervisionSwiper = new Swiper('#nav-supervision .swiper', {
   loop: true,
-   autoplay: true,
+  autoplay: {
+    delay: 2500,
+  },
   draggable: true,
   speed : 1000,
   pagination: {
@@ -266,25 +289,37 @@ const supervisionSwiper = new Swiper('#nav-supervision .swiper', {
   },
 });
 
-//  End Portfolio swipers
+//*************************************************************
+
+//  End of  Portfolio Swipers
 
 
 
 
-})
+}) // End of window on load
 
 
+//*********************************************************************************************************
 
+// document ready
 
 $(document).ready(function(){
 
 
 
+// change direction of animation of some elements in English
+
+if($("html").attr("dir") == "ltr"){
+  $(".about-content .title , .about-content .para , .talkToUs").attr("data-aos", "fade-right");
+  $(".portfolio-cont .title").attr("data-aos" , "fade-right") ;
+  $(".portfolio-cont .viewAllWorks").attr("data-aos" , "fade-left") ;
+  $(".blog-parent .desc").attr("data-aos" , "fade-left") ;
+}
+
+//*************************************************************
 
 
-
-
-
+// Set delay and remove anaimation from some elements in mobile
 
 if($(window).width() < 992){
   $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "200")
@@ -296,40 +331,20 @@ if($(window).width() < 1200){
   $(".about-content").attr("data-aos", "fade-down").attr("data-aos-easing", "ease-in-out")
 }
 
+//*************************************************************
 
-
-
-
-
-
-
-
-
-// **************************************************************************************************
-
-
-
-$(".big-menu > li").on("click" , function(){
-  $(this).siblings().removeClass("active");
-  $(this).addClass("active");
-})
-
-
-
+// In mobile when click an anchor, the sidebar should close
 
 if($(window).width() < 992){
-  $(".big-menu > li").on("click" , function(){
+  $(".big-menu > li a").on("click" , function(){
     $(".navigation").removeClass("open-nav");
     $("body").removeClass("overflow-hidden") ;
   })
 }
 
+//*************************************************************
 
-
-
-// **************************************************************************************************
-
-
+// Counters if we need them
 
 // if($(".counter-sec").length > 0)  {
 //   const mySection = document.querySelector('.counter-sec'); 
@@ -365,11 +380,9 @@ if($(window).width() < 992){
 //   });
 // }
 
+//*************************************************************
 
-
-
-//  brands marquee
-
+//  Brands marquee
 
 $(".brands .block-marquee").marquee({
   duration: window.innerWidth < 768 ? 20000 : 30000,
@@ -381,14 +394,9 @@ $(".brands .block-marquee").marquee({
   startVisible: true
 });
 
+//*************************************************************
 
-
-
-// **************************************************************************************************
-
-
-// open and close nav
-
+// open and close sidebar in Mobile
 
 $(".bars").on("click" , function(){
   $(".navigation").addClass("open-nav");
@@ -400,13 +408,9 @@ $(".closeBtn").on("click" , function(){
   $("body").removeClass("overflow-hidden") ;
 })
 
+//*************************************************************
 
-
-
-
-// **************************************************************************************************
-
-// to top button
+// back to top button
 
 $(window).scroll(function(){
   if($(window).scrollTop() > 150){
@@ -420,13 +424,10 @@ $(".back-to-top").click(function(){
   $(window).scrollTop(0);
 }) 
 
+//*************************************************************
 
 
-// **************************************************************************************************
-
-
-//fixed nav
-
+// Fixed Header
 
 if($(window).width() > 992){
   $(window).on("scroll", function () {
@@ -436,16 +437,13 @@ if($(window).width() > 992){
         $("header").removeClass("fixed-header");
     }
   });
- 
- 
 }
 
+//*************************************************************
 
 
 
 
-
-// *************************************************************************************************
 
 })   // end document ready 
 
