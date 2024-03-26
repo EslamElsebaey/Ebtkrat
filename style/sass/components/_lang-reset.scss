@@ -63,6 +63,10 @@ html[dir="ltr"]{
         max-width: 625px;
     }
 
+    .page-services-sec .services-desc .para{
+        line-height: 32px;
+    }
+
     @include max-1200{
         .service-item .content .title{
             line-height: 1.4;
@@ -110,6 +114,21 @@ html[dir="ltr"]{
         .proj-cont .proj-desc{
             -webkit-line-clamp: 5;
             max-height:  105px;
+        }
+        .page-services-sec .services-desc .para{
+            line-height: 1.45;
+        }
+    }
+    .nav-topheader-li{
+        direction: rtl;
+    }
+
+    @media screen and (max-width : 520px) {
+        .counter-sec .counter-parent .counter-item:nth-child(2):after{
+            display: none;
+        }
+        .counter-sec .counter-parent .counter-item:nth-child(3):after{
+            display: block;
         }
     }
 }

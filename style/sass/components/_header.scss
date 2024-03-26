@@ -8,13 +8,12 @@
 .topheader{
     background-color: #191313;
     position: absolute;
-    direction: rtl;
+    // direction: rtl;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 2;
     .topheader-cont{
-        
         height: 38px;
         display: flex;
         align-items: center;
@@ -25,6 +24,7 @@
     display: flex;
     align-items: center;
     column-gap: 20px;
+    direction: rtl;
     > a {
         column-gap: 7px;
         display: flex;
@@ -68,7 +68,8 @@
 .lang{
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    column-gap: 33px;
+    position: relative;
     a{
         font-size: 15px;
         color: #5f5f5f;
@@ -77,8 +78,13 @@
             color: #9a7a4d;
         }
     }
-    .dash{
-    color: #fff;
+    &::after{
+        content: "—";
+        color: #fff;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        // margin: 0 15px;
     }
     .arabic{
         color: #fff;
@@ -170,6 +176,10 @@ header{
 }
 
 
+.big-menu > li:last-of-type{
+    margin: 0;
+}
+
 .call-consult-sec{
     display: flex;
     align-items: center;
@@ -208,6 +218,21 @@ header{
 } 
 
 
+.nav-topheader-ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.nav-topheader-li{
+    margin-bottom: 22px;
+    a {
+        color: #9a7a4d;
+        font-size: 17px;
+    }
+}
+
+
 @include min-1400 {
     .fixed-header{
         .logo img{
@@ -219,6 +244,10 @@ header{
 
 
 @include min-992 {
+
+    .nav-topheader-ul{
+        display: none;
+    }
     .close-lang-holder{
         display: none;
     }
@@ -301,6 +330,9 @@ header{
     .logo img{
         width: 170px;
     }
+    .big-menu > li:last-of-type{
+        margin-bottom: 15px;
+    }
     .openNav-btn{
         display: flex ;
         margin-inline-start: 30px;
@@ -335,7 +367,7 @@ header{
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        .big-menu{
+        .menus-parent{
             opacity: 1;
             visibility: visible;
             transform: translate(-50%,-50%);
@@ -345,14 +377,16 @@ header{
     .big-menu{
         flex-direction: column;
         margin:  0 ;
-        position: absolute;
+        align-items: center;
+    }
+    .menus-parent{
+         position: absolute;
         top: 50%;
         left: 50%;
         z-index: 2;
         width: 100%;
         padding-inline: 20px;
         transform: translate(-50%,-44%);
-        align-items: center;
         opacity: 0;
         visibility: hidden;
         transition: all ease-in-out .4s;
