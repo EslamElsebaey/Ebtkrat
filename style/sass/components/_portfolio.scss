@@ -146,7 +146,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-height: 33px;
+        max-height: 40px;
     }
     .proj-desc{
         font-size: 14px;
@@ -259,6 +259,19 @@
 }
 
 
+.page-portfolio-sec {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    .portfolio-cont{
+        justify-content: center;
+    }
+    .projects-parent{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 30px;
+    }
+}
+
 
 @include min-992 {
     .portfolio .container > .viewAllWorks{
@@ -317,6 +330,10 @@
 }
 
 @include max-768 {
+    .page-portfolio-sec .projects-parent{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
     .viewAllWorks {
         column-gap: 20px;
     }
@@ -357,6 +374,12 @@
     } 
     .project-item .project-overlay{
         padding-inline: 25px;
+    }
+    .page-portfolio-sec{
+        .tab-content{
+            margin-bottom: 0;
+        }
+        padding-bottom: 60px;
     }
 }
 

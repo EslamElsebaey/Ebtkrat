@@ -38,7 +38,7 @@ html[dir="ltr"]{
             max-width: 525px;
         }
         .para{
-            line-height: 32px;
+            line-height: 1.4;
         }
     }
     .lower-cont .arrow-anchor img{
@@ -66,6 +66,17 @@ html[dir="ltr"]{
     .page-services-sec .services-desc .para{
         line-height: 32px;
     }
+    .article-item .article-title{
+        line-height: 32px;
+        max-height: 64px;
+    }
+
+    @include max-1700{
+        .blog-parent .desc .title{
+            max-height: 90px;
+            font-size: 33px;
+        }
+    }
 
     @include max-1200{
         .service-item .content .title{
@@ -79,6 +90,10 @@ html[dir="ltr"]{
         }
     }
     @include max-768 {
+        .blog-parent .desc .para{
+            line-height: 1.4;
+            max-height: 126px;
+        }
         .banner-desc{
             width: 100%;
             .title{
@@ -99,8 +114,9 @@ html[dir="ltr"]{
         
        .blog-parent .desc .title{
             max-width: 100%;
-            line-height: 1.4;
-            max-height: 62px;
+            line-height: 1.3;
+            max-height: 58px;
+            font-size: 22px;
         }
          .upper-cont .title{
             max-width: 100%;
@@ -117,6 +133,15 @@ html[dir="ltr"]{
         }
         .page-services-sec .services-desc .para{
             line-height: 1.45;
+        }
+
+        .article-item .article-title{
+            line-height: 1.4;
+            max-height: 56px;
+        }
+        .article-item .article-item-desc .para{
+            line-height: 1.4;
+            max-height: 48px;
         }
     }
     .nav-topheader-li{

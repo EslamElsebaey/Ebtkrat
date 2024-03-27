@@ -383,9 +383,9 @@ if($(window).width() < 992){
 
 //*************************************************************
 
-//  Brands marquee
+//      Clients marquee
 
-$(".brands .block-marquee").marquee({
+$(".clients .block-marquee").marquee({
   duration: window.innerWidth < 768 ? 20000 : 30000,
   gap: window.innerWidth < 768 ? 30 : 40,
   delayBeforeStart: 0,
