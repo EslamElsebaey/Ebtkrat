@@ -108,7 +108,7 @@ html[dir="ltr"]{
             max-height: 126px;
         }
         .approach .main-cont .para{
-            line-height: 1.5;
+            line-height: 1.4;
         }
         .approach .main-cont .title , .main-cont .desc-img .title{
             line-height: 1.3;
@@ -145,6 +145,12 @@ html[dir="ltr"]{
             line-height: 1.35;
             height: 61px;
             margin-bottom: 15px;
+        }
+        .about-main-cont .desc-img .title{
+            line-height: 1.3;
+        }
+        .about-main-cont .desc-img .para{
+            line-height: 1.4;
         }
         .counter-sec .counter-parent .counter-item::after{
             inset-inline-start: 151px;
