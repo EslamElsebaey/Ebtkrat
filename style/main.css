@@ -185,8 +185,8 @@ a:focus, button:focus {
   filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.15));
   background-color: #9a7a4d;
   display: flex;
-  left: 10px;
-  bottom: 10px;
+  right: 0;
+  bottom: 145px;
   align-items: center;
   justify-content: center;
   transition: all linear 0.3s;
@@ -229,8 +229,8 @@ a:focus, button:focus {
   row-gap: 9px;
 }
 .call-whats-holder a {
-  width: 98px;
-  height: 59px;
+  width: 70px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,6 +272,7 @@ a:focus, button:focus {
   .back-to-top {
     width: 32px;
     height: 32px;
+    bottom: 113px;
     font-size: 18px;
   }
 }
