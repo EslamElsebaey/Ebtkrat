@@ -74,6 +74,15 @@ html[dir="ltr"]{
         max-width: 740px;
         line-height: 80px;
     }
+    .service-details-aboutSec .about-main-cont .desc-img .title{
+        line-height: 65px;
+    }
+    .bedroom-cont .para , .about-main-cont .desc-img .para{
+        line-height: 32px;
+    }
+    .proj-title-div .proj-portions{
+        row-gap: 8px;
+    }
 
     @include max-1700{
         .blog-parent .desc .title{
@@ -100,6 +109,9 @@ html[dir="ltr"]{
         }
     }
     @include max-768 {
+        .portfolio-cont .nav-tabs{
+            padding-left: 0;
+        }
         .heading .title{
             max-width: 100%;
         }
@@ -170,6 +182,15 @@ html[dir="ltr"]{
         .article-item .article-item-desc .para{
             line-height: 1.4;
             max-height: 48px;
+        }
+        .service-details-aboutSec .about-main-cont .desc-img .title{
+            line-height: 1.3;
+        }
+        .page-head{
+            line-height: 1.25;
+        }
+        .bedroom-cont .para,  .about-main-cont .desc-img .para{
+            line-height: 1.4;
         }
     }
     .nav-topheader-li{

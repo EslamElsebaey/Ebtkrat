@@ -1013,7 +1013,6 @@ header {
 .page-head {
   font-size: 35px;
   line-height: 53px;
-  text-transform: capitalize;
   color: #ffffff;
   font-weight: 400;
   text-align: center;
@@ -1679,7 +1678,7 @@ header {
     margin-top: 0;
   }
   .about-portfolio-sec {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
   .img-cont {
     max-width: 100%;
@@ -1688,12 +1687,15 @@ header {
     padding-top: 50px;
   }
   .about-main-cont .desc-img .title {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.3;
     margin-bottom: 25px;
   }
   .about-main-cont .desc-img .img {
     margin-top: 40px;
+  }
+  .about-main-cont .desc-img {
+    text-align: center;
   }
   .heading .arrow-contact .talkToUs {
     max-width: 340px;
@@ -1769,7 +1771,7 @@ header {
   }
   .upper-cont .title {
     max-width: 100%;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.5;
     text-align: center;
     margin-top: 0;
@@ -1974,6 +1976,20 @@ header {
   max-width: 789px;
 }
 
+.service-details-aboutSec .about-main-cont .desc-img .title {
+  font-weight: 300;
+}
+.service-details-aboutSec .about-main-cont .desc-img .img {
+  margin-top: 133px;
+}
+.service-details-aboutSec .talkToUs {
+  margin-top: 70px;
+}
+
+.service-details-portf-sec {
+  margin-bottom: 140px;
+}
+
 @media only screen and (max-width: 1699px) {
   .service-item .content {
     padding-top: 35px;
@@ -2041,6 +2057,16 @@ header {
   .services-parent {
     gap: 20px;
   }
+  .service-details-aboutSec .about-main-cont .desc-img .title {
+    font-size: 39px;
+    line-height: 1.5;
+  }
+  .service-details-aboutSec .about-main-cont .desc-img .img {
+    margin-top: 80px;
+  }
+  .service-details-aboutSec .talkToUs {
+    margin-top: 50px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .service-item .content .sub-para {
@@ -2059,6 +2085,9 @@ header {
   }
   .services-parent {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .service-details-aboutSec .talkToUs {
+    margin-inline: auto;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -2129,6 +2158,22 @@ header {
   }
   .page-services-sec .services-desc {
     margin-bottom: 35px;
+  }
+  .service-details-aboutSec .about-main-cont .desc-img .title {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+  .service-details-aboutSec .talkToUs {
+    margin-top: 30px;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    padding: 0 40px;
+  }
+  .service-details-aboutSec .about-main-cont .desc-img .img {
+    margin-top: 40px;
+  }
+  .service-details-portf-sec {
+    margin-bottom: 50px;
   }
 }
 .blog {
@@ -2885,6 +2930,7 @@ header {
     justify-content: unset;
     flex-wrap: nowrap;
     overflow-x: auto;
+    padding-left: 1px;
     gap: 15px;
   }
   .portfolio-cont .nav-tabs::-webkit-scrollbar {
@@ -3260,6 +3306,238 @@ header {
     height: 55px;
   }
 }
+.project-mainBanner {
+  height: 600px;
+  background-image: url(../images/project/banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-desc {
+  margin-top: 122px;
+}
+
+.proj-desc-cont {
+  max-width: 1027px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.proj-portions {
+  margin-top: 52px;
+}
+
+.proj-title-div .title {
+  font-size: 55px;
+  line-height: 83px;
+  color: #9A7A4D;
+  font-weight: 300;
+}
+.proj-title-div .proj-portions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+.proj-title-div .proj-portions .portion {
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  color: #271F1E;
+}
+.proj-title-div .proj-portions .portion::after {
+  content: "/";
+  margin: 0 20px;
+}
+
+.proj-details {
+  display: flex;
+  flex-direction: column;
+}
+.proj-details .proj-details-cont {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.proj-details .proj-details-cont:last-of-type {
+  margin-bottom: 0;
+}
+.proj-details .details-title {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #271F1E;
+}
+.proj-details .details-value {
+  margin-inline-start: 15px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #271F1E;
+}
+
+.project-desc .images {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.project-desc .images img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.proj-title-div .proj-portions .portion:last-of-type::after {
+  display: none;
+}
+
+.bedroom {
+  margin-top: 109px;
+}
+
+.bedroom-cont .title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 54px;
+  color: #271F1E;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.bedroom-cont .para {
+  max-width: 1295px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  color: #271F1E;
+}
+.bedroom-cont .desc {
+  margin-bottom: 90px;
+}
+.bedroom-cont .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.big-img {
+  margin-top: 130px;
+}
+.big-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project-temp-sec {
+  margin-top: 135px;
+}
+.project-temp-sec .about-main-cont .desc-img .title {
+  color: #271F1E;
+  font-size: 36px;
+  line-height: 54px;
+  margin-top: 55px;
+}
+.project-temp-sec .about-main-cont .desc-img .para {
+  max-width: 819px;
+  font-weight: 300;
+}
+.project-temp-sec .about-main-cont .desc-img .img {
+  margin-top: 130px;
+}
+
+.project-portfolio-sec {
+  margin-top: 70px;
+  margin-bottom: 139px;
+}
+
+@media only screen and (max-width: 1699px) {
+  .project-mainBanner {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .project-mainBanner {
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .proj-desc-cont {
+    flex-direction: column;
+    max-width: 100%;
+    row-gap: 25px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .project-desc .images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .project-desc {
+    margin-top: 40px;
+  }
+  .proj-title-div .title {
+    font-size: 27px;
+    line-height: 1.5;
+  }
+  .proj-title-div .proj-portions .portion::after {
+    margin: 0 10px;
+  }
+  .proj-portions {
+    margin-top: 25px;
+  }
+  .proj-details .details-value, .proj-details .details-title {
+    font-size: 17px;
+    margin-inline-start: 12px;
+  }
+  .project-desc .images {
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .proj-details .proj-details-cont {
+    margin-bottom: 10px;
+  }
+  .bedroom-cont .title {
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .bedroom {
+    margin-top: 40px;
+  }
+  .bedroom-cont .para {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .bedroom-cont .desc {
+    margin-bottom: 30px;
+  }
+  .project-temp-sec .about-main-cont .desc-img .title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .project-temp-sec {
+    margin-top: 40px;
+  }
+  .project-temp-sec .about-main-cont .desc-img .para {
+    max-width: 100%;
+  }
+  .project-temp-sec .about-main-cont .desc-img .img, .big-img {
+    margin-top: 30px;
+  }
+  .project-portfolio-sec {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .project-mainBanner {
+    height: 250px;
+  }
+}
 footer {
   padding-top: 152px;
   padding-bottom: 54px;
@@ -3496,6 +3774,15 @@ html[dir=ltr] .heading .title {
   max-width: 740px;
   line-height: 80px;
 }
+html[dir=ltr] .service-details-aboutSec .about-main-cont .desc-img .title {
+  line-height: 65px;
+}
+html[dir=ltr] .bedroom-cont .para, html[dir=ltr] .about-main-cont .desc-img .para {
+  line-height: 32px;
+}
+html[dir=ltr] .proj-title-div .proj-portions {
+  row-gap: 8px;
+}
 @media only screen and (max-width: 1699px) {
   html[dir=ltr] .blog-parent .desc .title {
     max-height: 90px;
@@ -3520,6 +3807,9 @@ html[dir=ltr] .heading .title {
   }
 }
 @media only screen and (max-width: 767px) {
+  html[dir=ltr] .portfolio-cont .nav-tabs {
+    padding-left: 0;
+  }
   html[dir=ltr] .heading .title {
     max-width: 100%;
   }
@@ -3586,6 +3876,15 @@ html[dir=ltr] .heading .title {
   html[dir=ltr] .article-item .article-item-desc .para {
     line-height: 1.4;
     max-height: 48px;
+  }
+  html[dir=ltr] .service-details-aboutSec .about-main-cont .desc-img .title {
+    line-height: 1.3;
+  }
+  html[dir=ltr] .page-head {
+    line-height: 1.25;
+  }
+  html[dir=ltr] .bedroom-cont .para, html[dir=ltr] .about-main-cont .desc-img .para {
+    line-height: 1.4;
   }
 }
 html[dir=ltr] .nav-topheader-li {

@@ -175,6 +175,21 @@
     } 
 }
 
+.service-details-aboutSec{
+    .about-main-cont .desc-img .title{
+        font-weight: 300;
+    }
+    .about-main-cont .desc-img .img{
+        margin-top: 133px;
+    }
+    .talkToUs{
+        margin-top: 70px;
+    }
+}
+
+.service-details-portf-sec{
+    margin-bottom: 140px;
+}
 
 
 @include max-1700{
@@ -251,6 +266,16 @@
     .services-parent{
         gap: 20px;
     }
+    .service-details-aboutSec .about-main-cont .desc-img .title{
+        font-size: 39px;
+        line-height: 1.5;
+    }
+    .service-details-aboutSec .about-main-cont .desc-img .img{
+        margin-top: 80px;
+    }
+    .service-details-aboutSec .talkToUs{
+        margin-top: 50px;
+    }
 }
 
 @include max-992 {
@@ -273,6 +298,10 @@
     .services-parent{
         grid-template-columns:  repeat(2, 1fr);
     }
+    .service-details-aboutSec .talkToUs{
+        margin-inline: auto;
+    }
+   
 }
 
 @include max-768 {
@@ -344,6 +373,21 @@
     }
     .page-services-sec .services-desc{
         margin-bottom: 35px;
+    }
+    .service-details-aboutSec .about-main-cont .desc-img .title{
+        font-size: 25px;
+        line-height: 1.3;
+    }
+    .service-details-aboutSec .talkToUs{
+        margin-top: 30px;
+        max-width: max-content;
+        padding: 0 40px;
+    }
+    .service-details-aboutSec .about-main-cont .desc-img .img{
+        margin-top: 40px;
+    }
+    .service-details-portf-sec{
+        margin-bottom: 50px;
     }
 }
 
