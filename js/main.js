@@ -310,7 +310,7 @@ $(document).ready(function(){
 // change direction of animation of some elements in English
 
 if($("html").attr("dir") == "ltr"){
-  $(".about-content .title , .about-content .para , .talkToUs").attr("data-aos", "fade-right");
+  $(".about-content .title , .about-content .para , .about-content .talkToUs").attr("data-aos", "fade-right");
   $(".portfolio-cont .title").attr("data-aos" , "fade-right") ;
   $(".portfolio-cont .viewAllWorks").attr("data-aos" , "fade-left") ;
   $(".blog-parent .desc").attr("data-aos" , "fade-left") ;

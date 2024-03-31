@@ -70,11 +70,18 @@ html[dir="ltr"]{
         line-height: 32px;
         max-height: 64px;
     }
+    .heading .title{
+        max-width: 740px;
+        line-height: 80px;
+    }
 
     @include max-1700{
         .blog-parent .desc .title{
             max-height: 90px;
             font-size: 33px;
+        }
+        .heading .title{
+            line-height: 65px;
         }
     }
 
@@ -88,11 +95,26 @@ html[dir="ltr"]{
             line-height: 1.5;
             height: 127.5px;
         }
+        .heading .title{
+            line-height: 1.5;
+        }
     }
     @include max-768 {
+        .heading .title{
+            max-width: 100%;
+        }
         .blog-parent .desc .para{
             line-height: 1.4;
             max-height: 126px;
+        }
+        .approach .main-cont .para{
+            line-height: 1.5;
+        }
+        .approach .main-cont .title , .main-cont .desc-img .title{
+            line-height: 1.3;
+        }
+        .heading .title{
+            line-height: 1.3;
         }
         .banner-desc{
             width: 100%;
