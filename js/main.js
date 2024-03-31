@@ -91,9 +91,9 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
 
 const  AboutSwiper = new Swiper('.about .swiper', {
   loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  autoplay: {
+    delay: 3000,
+  },
   speed : 1000,
   allowTouchMove: true,
   draggable: true,
