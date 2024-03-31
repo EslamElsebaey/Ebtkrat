@@ -11,7 +11,7 @@ footer{
 .footer-logo{
     display: flex;
     justify-content: center;
-    margin-bottom: 111px;
+    margin-bottom: 70px;
     img{
         width: 202px;
     }
@@ -19,7 +19,7 @@ footer{
 .footer-social{
     display: flex;
     justify-content: center;
-    column-gap: 15px;
+    column-gap: 30px;
     a {
         font-size: 23px;
         display: flex;
@@ -48,7 +48,7 @@ footer{
         row-gap: 25px;
     }
     a {
-        font-size: 20px;
+        font-size: 18px;
         color: #271f1e;
         font-weight: 300;
         transition: all linear 0.2s;
@@ -61,7 +61,7 @@ footer{
 
 .line{
     width: 387px;
-    border-top: 0.55px solid #271F1E;
+    border-top: 1px solid #c1c1c1;
     margin-inline: auto;
    
 }
@@ -93,14 +93,14 @@ footer{
         flex-wrap: wrap;
         justify-content: center;
         li{
-            font-size: 20px;
+            font-size: 18px;
             color: #271f1e;
             font-weight: 300;
         }
     }
 }
 .copyright{
-    font-size: 20px;
+    font-size: 16px;
     color: #271f1e;
     font-weight: 300;
     text-align: center;
@@ -114,9 +114,6 @@ footer{
         margin-top: 20px;
         ul {
             column-gap: 25px;
-            li{
-                font-size: 18px;
-            }
         } 
     }
     footer{
@@ -128,9 +125,6 @@ footer{
     }
     .footer-mainLinks {
         margin-top: 40px;
-        a{
-            font-size: 18px;
-        }
         ul{
             row-gap: 15px;
             column-gap: 25px;
@@ -157,7 +151,6 @@ footer{
     }
     .copyright{
         margin-top: 35px;
-        font-size: 16px;
     }
 }
 

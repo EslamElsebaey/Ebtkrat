@@ -3557,7 +3557,7 @@ footer {
 .footer-logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 111px;
+  margin-bottom: 70px;
 }
 .footer-logo img {
   width: 202px;
@@ -3566,8 +3566,8 @@ footer {
 .footer-social {
   display: flex;
   justify-content: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .footer-social a {
   font-size: 23px;
@@ -3599,7 +3599,7 @@ footer {
   row-gap: 25px;
 }
 .footer-mainLinks a {
-  font-size: 20px;
+  font-size: 18px;
   color: #271f1e;
   font-weight: 300;
   transition: all linear 0.2s;
@@ -3611,7 +3611,7 @@ footer {
 
 .line {
   width: 387px;
-  border-top: 0.55px solid #271F1E;
+  border-top: 1px solid #c1c1c1;
   margin-inline: auto;
 }
 
@@ -3648,13 +3648,13 @@ footer {
   justify-content: center;
 }
 .countries ul li {
-  font-size: 20px;
+  font-size: 18px;
   color: #271f1e;
   font-weight: 300;
 }
 
 .copyright {
-  font-size: 20px;
+  font-size: 16px;
   color: #271f1e;
   font-weight: 300;
   text-align: center;
@@ -3670,9 +3670,6 @@ footer {
     -moz-column-gap: 25px;
          column-gap: 25px;
   }
-  .countries ul li {
-    font-size: 18px;
-  }
   footer {
     padding: 50px 0 40px 0;
     overflow: hidden;
@@ -3682,9 +3679,6 @@ footer {
   }
   .footer-mainLinks {
     margin-top: 40px;
-  }
-  .footer-mainLinks a {
-    font-size: 18px;
   }
   .footer-mainLinks ul {
     row-gap: 15px;
@@ -3713,7 +3707,6 @@ footer {
   }
   .copyright {
     margin-top: 35px;
-    font-size: 16px;
   }
 }
 html[dir=ltr] .banner-desc .request-anchor, html[dir=ltr] .viewAllWorks, html[dir=ltr] .form-div .apply-btn {
