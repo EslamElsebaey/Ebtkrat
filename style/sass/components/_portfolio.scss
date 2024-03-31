@@ -340,6 +340,7 @@
     .portfolio-cont {
         > nav{
             order: 2;
+            width: 100%;
         }
         .title{
             font-size: 25px;
@@ -347,11 +348,17 @@
             text-align: center;
         }
         .nav-tabs{
-            justify-content: center;
+            justify-content: unset;
+            flex-wrap: nowrap;
+            overflow-x: auto;
             gap: 15px;
+            &::-webkit-scrollbar{
+                display: none;
+            }
             .nav-link{
                 height: 35px;
                 padding: 0 20px ;
+                flex-shrink: 0;
             }
         }
     } 

@@ -316,6 +316,10 @@ a:focus, button:focus {
   filter: brightness(0) saturate(100%) invert(51%) sepia(24%) saturate(756%) hue-rotate(356deg) brightness(92%) contrast(85%);
 }
 
+.phone span {
+  direction: ltr;
+}
+
 .lang-social {
   display: flex;
   align-items: center;
@@ -615,7 +619,7 @@ header {
   .open-nav .menus-parent {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
   }
   .big-menu {
     flex-direction: column;
@@ -623,17 +627,13 @@ header {
     align-items: center;
   }
   .menus-parent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
     width: 100%;
-    padding-inline: 20px;
-    transform: translate(-50%, -44%);
     opacity: 0;
     visibility: hidden;
     transition: all ease-in-out 0.4s;
     transition-delay: 400ms;
+    margin-top: 40px;
+    transform: translateY(25px);
   }
   .nav-topheader-li img {
     filter: brightness(0) saturate(100%) invert(51%) sepia(24%) saturate(756%) hue-rotate(356deg) brightness(92%) contrast(85%);
@@ -645,8 +645,11 @@ header {
     padding-bottom: 7px;
   }
   .big-menu > li a {
-    color: #9a7a4d;
+    color: #fff;
     font-size: 17px;
+  }
+  .big-menu > li a::after {
+    background-color: #fff;
   }
   .closeBtn {
     display: flex;
@@ -654,6 +657,9 @@ header {
   .closeBtn i {
     font-size: 24px;
     color: #9a7a4d;
+  }
+  .nav-topheader-ul {
+    margin-top: 40px;
   }
   .close-lang-holder {
     display: flex;
@@ -1101,6 +1107,7 @@ header {
 }
 .clients .block-anchor img {
   max-width: 100%;
+  filter: brightness(0) invert(1);
 }
 
 .clients-parent {
@@ -2867,6 +2874,7 @@ header {
   }
   .portfolio-cont > nav {
     order: 2;
+    width: 100%;
   }
   .portfolio-cont .title {
     font-size: 25px;
@@ -2874,12 +2882,18 @@ header {
     text-align: center;
   }
   .portfolio-cont .nav-tabs {
-    justify-content: center;
+    justify-content: unset;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 15px;
+  }
+  .portfolio-cont .nav-tabs::-webkit-scrollbar {
+    display: none;
   }
   .portfolio-cont .nav-tabs .nav-link {
     height: 35px;
     padding: 0 20px;
+    flex-shrink: 0;
   }
   .portfolio {
     padding-top: 50px;
@@ -2991,22 +3005,6 @@ header {
 .clients-reviews .swiper-button-next i, .clients-reviews .swiper-rtl .swiper-button-prev i {
   transform: rotate(180deg);
 }
-.clients-reviews .swiper-pagination {
-  bottom: 0;
-  height: 6px;
-  background-color: rgba(154, 122, 77, 0.2);
-}
-.clients-reviews .swiper-pagination-bullet {
-  flex-grow: 1;
-  margin: 0 !important;
-  height: 100%;
-  border-radius: 0;
-  background-color: rgba(154, 122, 77, 0.2);
-}
-.clients-reviews .swiper-pagination-bullet-active {
-  margin: 0 !important;
-  background-color: #9a7a4d;
-}
 
 .rectangle {
   height: 59px;
@@ -3016,10 +3014,21 @@ header {
 @media only screen and (max-width: 767px) {
   .clients-reviews {
     padding: 50px 0;
+    padding-bottom: 75px;
     background-position: 53%;
   }
   .clients-reviews .review-content {
     max-width: 100%;
+  }
+  .clients-reviews .swiper-pagination {
+    display: block;
+    bottom: -55px;
+  }
+  .clients-reviews .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .clients-reviews .swiper-pagination-bullet-active {
+    background-color: #fff;
   }
   .clients-reviews .review-text {
     font-size: 22px;
@@ -3027,9 +3036,6 @@ header {
   }
   .clients-reviews .title {
     margin-bottom: 20px;
-  }
-  .clients-reviews .swiper-pagination {
-    display: none;
   }
   .clients-reviews .swiper-button-next, .clients-reviews .clients-reviews .swiper-rtl .swiper-button-prev {
     left: 10px;
@@ -3051,12 +3057,7 @@ header {
     display: none;
   }
   .clients-reviews .swiper-button-next, .clients-reviews .swiper-button-prev {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
-  .clients-reviews .swiper-button-next:hover, .clients-reviews .swiper-button-prev:hover {
-    background-color: transparent;
+    display: none;
   }
   .clients-reviews .review-desc {
     display: -webkit-box;
@@ -3322,7 +3323,7 @@ footer {
 
 .line {
   width: 387px;
-  border: 0.55px solid #271F1E;
+  border-top: 0.55px solid #271F1E;
   margin-inline: auto;
 }
 
@@ -3424,6 +3425,7 @@ footer {
   }
   .copyright {
     margin-top: 35px;
+    font-size: 16px;
   }
 }
 html[dir=ltr] .banner-desc .request-anchor, html[dir=ltr] .viewAllWorks, html[dir=ltr] .form-div .apply-btn {

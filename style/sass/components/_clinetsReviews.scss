@@ -93,23 +93,8 @@
         }
     }
     
-    
-    .swiper-pagination{
-        bottom: 0;
-        height: 6px;
-        background-color: rgba($color: #9a7a4d, $alpha: 0.2);
-    }
-    .swiper-pagination-bullet{
-        flex-grow: 1;
-        margin: 0 !important;
-        height: 100%;
-        border-radius: 0;
-        background-color: rgba($color: #9a7a4d, $alpha: 0.2);
-    }
-    .swiper-pagination-bullet-active{
-        margin: 0 !important;
-        background-color: rgba($color: #9a7a4d, $alpha: 1);
-    }
+   
+   
 }
 
 
@@ -122,9 +107,20 @@
 @include max-768 {
     .clients-reviews {
         padding: 50px 0 ;
+        padding-bottom: 75px;
         background-position: 53%;
         .review-content{
             max-width: 100%;
+        }
+        .swiper-pagination{
+            display: block;
+            bottom: -55px;
+        }
+        .swiper-pagination-bullet{
+            background-color: rgba($color: #ffff, $alpha: 0.7);
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #fff;
         }
         .review-text{
             font-size: 22px;
@@ -132,9 +128,6 @@
         }
         .title{
             margin-bottom: 20px;
-        }
-        .swiper-pagination{
-            display: none;
         }
         .swiper-button-next, .clients-reviews .swiper-rtl .swiper-button-prev{
             left: 10px;
@@ -157,12 +150,7 @@
             display: none;
         }
         .swiper-button-next, .swiper-button-prev{
-            width: auto ;
-            height: auto ;
-            background-color: transparent ;
-            &:hover{
-                background-color: transparent;
-            }
+            display: none;
         }
         .review-desc{
             display: -webkit-box;
