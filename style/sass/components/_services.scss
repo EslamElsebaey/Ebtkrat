@@ -57,6 +57,16 @@
                 text-overflow: ellipsis;
                 height: 240px;
             }
+            .read-more{
+                font-size: 13px;
+                text-transform: capitalize;
+                margin-top: 20px;
+                display: inline-block;
+                line-height: 19px;
+                color: #9A7A4D;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #9A7A4D;
+            }
         }
         &:hover{
             .full-para-div{
@@ -305,6 +315,9 @@
 }
 
 @include max-768 {
+    .service-item .content .full-para-div{
+        text-align: center;
+    }
     .services{
         padding-top: 60px;
     }

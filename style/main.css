@@ -1322,24 +1322,12 @@ header {
   margin-top: 47px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .lower-cont .number {
   font-size: 50px;
   color: #9a7a4d;
   text-align: start;
-}
-.lower-cont .arrow-anchor {
-  transition: all linear 0.2s;
-}
-.lower-cont .arrow-anchor img {
-  transition: all linear 0.2s;
-}
-.lower-cont .arrow-anchor:hover {
-  transform: translateX(-7px);
-}
-.lower-cont .arrow-anchor:hover img {
-  filter: brightness(0) saturate(100%) invert(51%) sepia(24%) saturate(756%) hue-rotate(356deg) brightness(92%) contrast(85%);
 }
 
 .about .container {
@@ -1803,9 +1791,6 @@ header {
   .lower-cont .number {
     font-size: 32px;
   }
-  .lower-cont .arrow-anchor img {
-    width: 36px;
-  }
 }
 .services {
   padding-top: 110px;
@@ -1876,6 +1861,16 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   height: 240px;
+}
+.service-item .content .full-para-div .read-more {
+  font-size: 13px;
+  text-transform: capitalize;
+  margin-top: 20px;
+  display: inline-block;
+  line-height: 19px;
+  color: #9A7A4D;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #9A7A4D;
 }
 .service-item .content:hover .full-para-div {
   top: 50%;
@@ -2091,6 +2086,9 @@ header {
   }
 }
 @media only screen and (max-width: 767px) {
+  .service-item .content .full-para-div {
+    text-align: center;
+  }
   .services {
     padding-top: 60px;
   }
@@ -3741,9 +3739,6 @@ html[dir=ltr] .about-content .title {
 }
 html[dir=ltr] .about-content .para {
   line-height: 1.4;
-}
-html[dir=ltr] .lower-cont .arrow-anchor img {
-  transform: rotate(180deg);
 }
 html[dir=ltr] .service-item .content .title {
   line-height: 40px;

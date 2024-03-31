@@ -153,24 +153,11 @@
     margin-top: 47px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     .number{
         font-size: 50px;
         color: #9a7a4d;
         text-align: start;
-    }
-    .arrow-anchor{
-        transition: all linear 0.2s;
-
-        img{
-            transition: all linear 0.2s;
-        }
-        &:hover{
-            transform: translateX(-7px);
-            img{
-                filter: brightness(0) saturate(100%) invert(51%) sepia(24%) saturate(756%) hue-rotate(356deg) brightness(92%) contrast(85%);
-            }
-        }
     }
 }
 .about{
@@ -648,9 +635,6 @@
         margin-top: 20px;
         .number{
             font-size: 32px;
-        }
-        .arrow-anchor img{
-            width: 36px;
         }
     }
     
