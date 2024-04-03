@@ -1080,15 +1080,21 @@ header {
   }
 }
 .clients {
-  padding: 41px 0;
+  padding: 0;
+  height: 127px;
   background-color: #271F1E;
+}
+.clients .container {
+  height: 127px;
 }
 .clients .js-marquee-wrapper {
   width: 100% !important;
   display: flex;
+  height: 100%;
 }
 .clients .js-marquee {
   display: flex;
+  height: 127px;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
@@ -1097,6 +1103,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   direction: ltr;
+  height: 100%;
 }
 .clients .block-anchor {
   width: -moz-max-content;
@@ -1108,6 +1115,7 @@ header {
 .clients .block-anchor img {
   max-width: 100%;
   filter: brightness(0) invert(1);
+  max-height: 100%;
 }
 
 .clients-parent {

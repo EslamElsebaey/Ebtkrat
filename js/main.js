@@ -353,7 +353,7 @@ if($(window).width() < 992){
 //      Clients marquee
 
 $(".clients .block-marquee").marquee({
-  duration: window.innerWidth < 768 ? 20000 : 30000,
+  duration: window.innerWidth < 768 ? 20000 : 25000,
   gap: window.innerWidth < 768 ? 30 : 40,
   delayBeforeStart: 0,
   direction: $("html").attr("dir") === "rtl" ? "left" : "right",
