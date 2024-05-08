@@ -1117,6 +1117,9 @@ header {
   filter: brightness(0) invert(1);
   max-height: 100%;
 }
+.clients .block-anchor:last-of-type {
+  margin-right: 30px;
+}
 
 .clients-parent {
   display: flex;
