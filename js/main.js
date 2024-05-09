@@ -41,9 +41,9 @@ $(window).on("load", function () {
   const mainSwiper = new Swiper(".mainBanner .swiper", {
     draggable: true,
     speed: 1000,
-    // autoplay: {
-    //   delay: 4000,
-    // },
+    autoplay: {
+      delay: 2000,
+    },
     scrollbar: {
       el: ".mainBanner .swiper-scrollbar",
       hide: false,
