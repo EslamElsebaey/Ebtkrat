@@ -4,11 +4,9 @@
 
 .clients{
     padding:  0;
-    height: 127px;
+    // height: 127px;
     background-color: #271F1E;
-    .container{
-      height: 127px;
-    }
+  
     .js-marquee-wrapper {
       width: 100% !important;
       display: flex;
@@ -16,7 +14,6 @@
     }
     .js-marquee {
       display: flex;
-      height: 127px;
       column-gap: 40px;
     }
 
@@ -36,6 +33,7 @@
             max-width: 100%;
             filter: brightness(0) invert(1);
             max-height: 100%;
+            height: 90px;
         }
     }
     .block-anchor:last-of-type{
@@ -85,9 +83,7 @@
 
 
 @include max-768 {
-  .clients{
-    padding: 25px 0;
-  }
+
   .clients .js-marquee{
     column-gap: 30px;
   }

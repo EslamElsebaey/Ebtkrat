@@ -49,6 +49,11 @@
     text-align: center;
     width: 565px;
     margin-inline: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
    .title{
     font-size: 60px;
     line-height: 90px;
@@ -124,9 +129,9 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            &:hover{
-                background-color: #9a7a4d;
-            }
+            // &:hover{
+            //     background-color: #9a7a4d;
+            // }
             &::after{
                 content: "";
                 position: absolute;
@@ -249,6 +254,7 @@
     }
     .banner-desc{
         width: 100%;
+        padding-inline: 20px;
         .request-anchor{
             margin-bottom: 35px;
         }

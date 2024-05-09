@@ -1,5 +1,4 @@
-
-$(window).on("load" , function(){
+$(window).on("load", function () {
   // preloader
   $(".preloader").fadeOut();
 
@@ -10,6 +9,8 @@ $(window).on("load" , function(){
   AOS.init({
     once: true,
   });
+
+
 
   //*************************************************************
 
@@ -58,29 +59,49 @@ $(window).on("load" , function(){
 
   //*************************************************************
 
-
   // Counters
-        let numDivs = document.querySelectorAll(".num-holder .num");
-        let interval = 100;
+let numDivs = document.querySelectorAll(".num-holder .num");
 
-        numDivs.forEach((numDiv) => {
-          if (numDiv.innerHTML == "0") {
-            let startValue = 0;
-            let endValue = parseInt(numDiv.dataset.num);
-            let duration = Math.floor(interval / numDiv.dataset.num);
-            let counter = setInterval(() => {
-              startValue++;
-              console.log(duration)
-              numDiv.textContent = startValue;
-              if (startValue == endValue) {
-                clearInterval(counter);
-              }
-            }, duration);
-          }
-        });
-     
-    
-  
+$(window).on("scroll", function () {
+if ($(".counter-item").hasClass("aos-animate")) {
+  numDivs.forEach((numDiv) => {
+    if (numDiv.innerHTML == "0") {
+      let startValue = 0;
+      let endValue = parseInt(numDiv.dataset.num);
+      let increment = 0;
+      if (endValue <= 100) {
+        increment = 1;
+      } else if (endValue <= 1000) {
+        increment = 10;
+      } else if (endValue >= 1000) {
+        increment = 50;
+      } else if (endValue >= 2000) {
+        increment = 100;
+      }
+      let duration = 3000;
+      let steps = Math.floor(endValue / increment);
+      let stepDuration = duration / steps;
+      console.log(stepDuration);
+      let counter = setInterval(() => {
+        if (increment <= endValue) {
+          startValue += increment;
+        } else {
+          startValue = endValue;
+        }
+        numDiv.textContent = startValue;
+        if (startValue >= endValue) {
+          clearInterval(counter);
+        }
+      }, stepDuration);
+    }
+  });
+}
+
+})
+
+
+
+
 
   //*************************************************************
 
@@ -108,47 +129,51 @@ $(window).on("load" , function(){
 
   //*************************************************************
 
-  // About swiper
 
-  const AboutSwiper = new Swiper(".about .swiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-    },
-    speed: 1000,
-    allowTouchMove: true,
-    draggable: true,
-    pagination: {
-      el: ".about .swiper-pagination",
-      clickable: true,
-    },
+  // About Swiper
+    if (window.innerWidth >= 768) {
+      const AboutSwiper = new Swiper(".about .swiper", {
+        // loop: true,
+        // autoplay: {
+        //   delay: 3000,
+        // },
+        mousewheel: true,
+        freeMode: true,
+        speed: 1000,
+        allowTouchMove: true,
+        draggable: true,
+        pagination: {
+          el: ".about .swiper-pagination",
+          clickable: true,
+        },
 
-    breakpoints: {
-      0: {
-        slidesPerView: 1.1,
-        spaceBetween: 15,
-        centeredSlides: true,
-      },
-      767: {
-        slidesPerView: 1.1,
-        spaceBetween: 30,
-        centeredSlides: true,
-      },
-      992: {
-        slidesPerView: 1.3,
-        spaceBetween: 40,
-        centeredSlides: true,
-      },
-      1199: {
-        slidesPerView: 1.15,
-        spaceBetween: 50,
-      },
-      1400: {
-        slidesPerView: 1.15,
-        spaceBetween: 50,
-      },
-    },
-  });
+        breakpoints: {
+          0: {
+            slidesPerView: 1.1,
+            spaceBetween: 15,
+            centeredSlides: true,
+          },
+          767: {
+            slidesPerView: 1.1,
+            spaceBetween: 30,
+            centeredSlides: true,
+          },
+          992: {
+            slidesPerView: 1.3,
+            spaceBetween: 40,
+            centeredSlides: true,
+          },
+          1199: {
+            slidesPerView: 1.15,
+            spaceBetween: 50,
+          },
+          1400: {
+            slidesPerView: 1.15,
+            spaceBetween: 50,
+          },
+        },
+      });
+    }
 
   //*************************************************************
 
@@ -316,124 +341,127 @@ $(window).on("load" , function(){
   //*************************************************************
 
   //  End of  Portfolio Swipers
-}) // End of window on load
-
+}); // End of window on load
 
 //*********************************************************************************************************
 
 // document ready
 
-$(document).ready(function(){
+$(document).ready(function () {
+  let SwiperTop = new Swiper(".swiper--top", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    speed: 1000,
+    autoplay: {
+      delay: 1,
+    },
+    loop: true,
+    slidesPerView: "auto",
+    allowTouchMove: false,
+    // disableOnInteraction: true,
+  });
 
+  // change direction of animation of some elements in English
 
-
-// change direction of animation of some elements in English
-
-if($("html").attr("dir") == "ltr"){
-  $(".about-content .title , .about-content .para , .about-content .talkToUs").attr("data-aos", "fade-right");
-  $(".portfolio-cont .title").attr("data-aos" , "fade-right") ;
-  $(".portfolio-cont .viewAllWorks").attr("data-aos" , "fade-left") ;
-  $(".blog-parent .desc").attr("data-aos" , "fade-left") ;
-}
-
-//*************************************************************
-
-
-// Set delay and remove anaimation from some elements in mobile
-
-if($(window).width() < 992){
-  $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "200")
-  $(".about-content .title , .about-content .para , .talkToUs").removeAttr("data-aos")
-  $(".portfolio-cont .title").attr("data-aos", "fade-down").attr("data-aos-delay", "300").attr("data-aos-duration", "800")
-  $(".blog-parent .desc").attr("data-aos", "fade-up")
-}
-
-if($(window).width() < 1200){
-  $(".about-content").attr("data-aos", "fade-down").attr("data-aos-easing", "ease-in-out")
-}
-
-//*************************************************************
-
-// In mobile when click an anchor, the sidebar should close
-
-if($(window).width() < 992){
-  $(".big-menu > li a").on("click" , function(){
-    $(".navigation").removeClass("open-nav");
-    $("body").removeClass("overflow-hidden") ;
-  })
-}
-
-//*************************************************************
-
-
-//  Clients marquee
-
-$(".clients .block-marquee").marquee({
-  duration: 15000,
-  gap: 0,
-  delayBeforeStart: 0,
-  direction: $("html").attr("dir") === "rtl" ? "left" : "right",
-  duplicated: true,
-  css3easing: "linear",
-  startVisible: true
-});
-
-//*************************************************************
-
-// open and close sidebar in Mobile
-
-$(".bars").on("click" , function(){
-  $(".navigation").addClass("open-nav");
-  $("body").addClass("overflow-hidden") ;
-})
-
-$(".closeBtn").on("click" , function(){
-  $(".navigation").removeClass("open-nav");
-  $("body").removeClass("overflow-hidden") ;
-})
-
-//*************************************************************
-
-// back to top button
-
-$(window).scroll(function(){
-  if($(window).scrollTop() > 150){
-    $(".back-to-top").addClass("showToTop")
-  }else{
-    $(".back-to-top").removeClass("showToTop")
+  if ($("html").attr("dir") == "ltr") {
+    $(
+      ".about-content .title , .about-content .para , .about-content .talkToUs"
+    ).attr("data-aos", "fade-right");
+    $(".portfolio-cont .title").attr("data-aos", "fade-right");
+    $(".portfolio-cont .viewAllWorks").attr("data-aos", "fade-left");
+    $(".blog-parent .desc").attr("data-aos", "fade-left");
   }
-})
 
-$(".back-to-top").click(function(){
-  $(window).scrollTop(0);
-}) 
+  //*************************************************************
 
-//*************************************************************
+  // Set delay and remove anaimation from some elements in mobile
 
+  if ($(window).width() < 992) {
+    $(".portfolio .container > .viewAllWorks").attr("data-aos-delay", "200");
+    $(".about-content .title , .about-content .para , .talkToUs").removeAttr(
+      "data-aos"
+    );
+    $(".portfolio-cont .title")
+      .attr("data-aos", "fade-down")
+      .attr("data-aos-delay", "300")
+      .attr("data-aos-duration", "800");
+    $(".blog-parent .desc").attr("data-aos", "fade-up");
+  }
 
-// Fixed Header
+  if ($(window).width() < 1200) {
+    $(".about-content")
+      .attr("data-aos", "fade-down")
+      .attr("data-aos-easing", "ease-in-out");
+  }
 
-if($(window).width() > 992){
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 1) {
-        $("header").addClass("fixed-header");
+  //*************************************************************
+
+  // In mobile when click an anchor, the sidebar should close
+
+  if ($(window).width() < 992) {
+    $(".big-menu > li a").on("click", function () {
+      $(".navigation").removeClass("open-nav");
+      $("body").removeClass("overflow-hidden");
+    });
+  }
+
+  //*************************************************************
+
+  //  Clients marquee
+
+  $(".clients .block-marquee").marquee({
+    duration: 15000,
+    gap: 0,
+    delayBeforeStart: 0,
+    direction: $("html").attr("dir") === "rtl" ? "left" : "right",
+    duplicated: true,
+    css3easing: "linear",
+    startVisible: true,
+  });
+
+  //*************************************************************
+
+  // open and close sidebar in Mobile
+
+  $(".bars").on("click", function () {
+    $(".navigation").addClass("open-nav");
+    $("body").addClass("overflow-hidden");
+  });
+
+  $(".closeBtn").on("click", function () {
+    $(".navigation").removeClass("open-nav");
+    $("body").removeClass("overflow-hidden");
+  });
+
+  //*************************************************************
+
+  // back to top button
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 150) {
+      $(".back-to-top").addClass("showToTop");
     } else {
-        $("header").removeClass("fixed-header");
+      $(".back-to-top").removeClass("showToTop");
     }
   });
-}
 
-//*************************************************************
+  $(".back-to-top").click(function () {
+    $(window).scrollTop(0);
+  });
 
+  //*************************************************************
 
+  // Fixed Header
 
+  if ($(window).width() > 992) {
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 1) {
+        $("header").addClass("fixed-header");
+      } else {
+        $("header").removeClass("fixed-header");
+      }
+    });
+  }
 
-
-})   // end document ready 
-
-
-
-
-
-
-
+  //*************************************************************
+}); // end document ready

@@ -728,6 +728,11 @@ header {
   text-align: center;
   width: 565px;
   margin-inline: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 .banner-desc .title {
   font-size: 60px;
@@ -803,9 +808,6 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-}
-.counter-sec .counter-parent .counter-item:hover {
-  background-color: #9a7a4d;
 }
 .counter-sec .counter-parent .counter-item::after {
   content: "";
@@ -902,6 +904,7 @@ header {
   }
   .banner-desc {
     width: 100%;
+    padding-inline: 20px;
   }
   .banner-desc .request-anchor {
     margin-bottom: 35px;
@@ -1081,11 +1084,7 @@ header {
 }
 .clients {
   padding: 0;
-  height: 127px;
   background-color: #271F1E;
-}
-.clients .container {
-  height: 127px;
 }
 .clients .js-marquee-wrapper {
   width: 100% !important;
@@ -1094,7 +1093,6 @@ header {
 }
 .clients .js-marquee {
   display: flex;
-  height: 127px;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
@@ -1116,6 +1114,7 @@ header {
   max-width: 100%;
   filter: brightness(0) invert(1);
   max-height: 100%;
+  height: 90px;
 }
 .clients .block-anchor:last-of-type {
   margin-right: 30px;
@@ -1159,9 +1158,6 @@ header {
   }
 }
 @media only screen and (max-width: 767px) {
-  .clients {
-    padding: 25px 0;
-  }
   .clients .js-marquee {
     -moz-column-gap: 30px;
          column-gap: 30px;
@@ -1207,6 +1203,10 @@ header {
 }
 .about .swiper-slide-prev .item {
   filter: none;
+}
+
+.about .swiper-wrapper {
+  transition-duration: 0.1s !important;
 }
 
 .about-content {
@@ -1350,7 +1350,7 @@ header {
   display: flex;
   height: 5px;
   padding-inline: 40px;
-  background-color: #271F1E;
+  background-color: #271f1e;
   border-radius: 0;
   left: 50%;
   bottom: 0;
@@ -1361,11 +1361,11 @@ header {
   margin: 0 !important;
   height: 100%;
   border-radius: 0;
-  background-color: #271F1E;
+  background-color: #271f1e;
 }
 .about .swiper-pagination-bullet-active {
   margin: 0 !important;
-  background-color: #9A7A4D;
+  background-color: #9a7a4d;
 }
 
 .page-about-sec {
@@ -1395,7 +1395,7 @@ header {
   max-width: 707px;
   font-size: 72px;
   line-height: 90px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 132px;
 }
 .heading .arrow-contact {
@@ -1436,7 +1436,7 @@ header {
   height: 100%;
 }
 .heading .arrow:hover .fa-chevron-down {
-  color: #271F1E;
+  color: #271f1e;
 }
 .heading .arrow .fa-chevron-down {
   color: #fff;
@@ -1451,7 +1451,7 @@ header {
 .about-main-cont .desc-img .title {
   font-size: 55px;
   line-height: 83px;
-  color: #9A7A4D;
+  color: #9a7a4d;
   margin-bottom: 30px;
   text-transform: capitalize;
 }
@@ -1459,7 +1459,7 @@ header {
   max-width: 763px;
   font-size: 24px;
   line-height: 36px;
-  color: #271F1E;
+  color: #271f1e;
 }
 .about-main-cont .desc-img .img {
   max-width: 763px;
@@ -1492,14 +1492,14 @@ header {
 .approach .main-cont .title {
   font-size: 55px;
   line-height: 83px;
-  color: #9A7A4D;
+  color: #9a7a4d;
   text-transform: capitalize;
 }
 .approach .main-cont .para {
   max-width: 763px;
   font-size: 24px;
   line-height: 36px;
-  color: #271F1E;
+  color: #271f1e;
   margin-top: 30px;
 }
 .approach .main-cont .img {
@@ -1645,7 +1645,8 @@ header {
     max-width: 100%;
     text-align: center;
   }
-  .about-main-cont, .approach .main-cont {
+  .about-main-cont,
+  .approach .main-cont {
     flex-direction: column;
     align-items: center;
   }
@@ -1663,6 +1664,10 @@ header {
   }
 }
 @media only screen and (max-width: 767px) {
+  .about .swiper-wrapper {
+    flex-direction: column;
+    row-gap: 30px;
+  }
   .approach .main-cont .title {
     font-size: 30px;
   }
@@ -1743,8 +1748,7 @@ header {
     padding-top: 50px;
   }
   .about .swiper-pagination {
-    padding-inline: 15px;
-    width: calc(100% - 40px);
+    display: none;
   }
   .about .container {
     padding-bottom: 40px;
@@ -2110,7 +2114,7 @@ header {
     text-align: center;
   }
   .services {
-    padding-top: 60px;
+    padding-top: 40px;
   }
   .page-services-sec {
     padding-top: 50px;
